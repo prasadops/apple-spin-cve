@@ -204,10 +204,11 @@ deploymentConfigurations:
     apiSecurity:
       ssl:
         enabled: false
-      overrideBaseUrl: /gate
+      overrideBaseUrl: https://spin-gate.apple-cve.opsmx.net
     uiSecurity:
       ssl:
         enabled: false
+      overrideBaseUrl: https://spin-deck.apple-cve.opsmx.net
     authn:
       oauth2:
         enabled: false
