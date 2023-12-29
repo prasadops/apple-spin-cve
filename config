@@ -1,7 +1,7 @@
 currentDeployment: default
 deploymentConfigurations:
 - name: default
-  version: 1.29.3
+  version: 1.30.1
   providers:
     appengine:
       enabled: false
@@ -204,10 +204,11 @@ deploymentConfigurations:
     apiSecurity:
       ssl:
         enabled: false
-      overrideBaseUrl: /gate
+      overrideBaseUrl: https://spin-gate.apple-cve.opsmx.net
     uiSecurity:
       ssl:
         enabled: false
+      overrideBaseUrl: https://spin-deck.apple-cve.opsmx.net
     authn:
       oauth2:
         enabled: false
