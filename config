@@ -130,7 +130,7 @@ deploymentConfigurations:
       enabled: false
     haServices:
       clouddriver:
-        enabled: false
+        enabled: true
         disableClouddriverRoDeck: false
       echo:
         enabled: false
