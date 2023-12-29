@@ -1,0 +1,32 @@
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:5e71d0d-202305290905
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:a004a711-202305291233
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:a004a711-202305301424
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:e6e766b6-202306011339
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:e6e766b6-202306051312
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:da78486f-202306061418
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:da78486f-202306091343
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:da78486f-202306131630
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:a3dc7c08-202306171257
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:a3dc7c08-202306171257
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:22bc6513-202306211738
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:499b710-202306230633-dev
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:2576b6a-202306231106
+#artifactId: quay.io/opsmxpublic/ubi8-oes-echo:8fd3e1d6-7
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:499b710-202306230633
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1bb9bf1-202306261227
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1bb9bf1-202306271248
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:db7b36c2-202306281126
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.1202306281126
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.120230818
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.1914
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.1921-dev
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.1927
+#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.11107
+artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.11128
+kubernetes:
+  podAnnotations:
+    prometheus.io/path: /aop-prometheus
+    prometheus.io/port: '8089'
+    prometheus.io/scrape: 'true'
+  useExecHealthCheck: true
+  customHealthCheckExecCommands: ["wget", "--no-check-certificate", "--spider", "-q", "http://localhost:8089/health"]

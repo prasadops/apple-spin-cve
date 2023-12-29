@@ -1,0 +1,30 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    acme.cert-manager.io/http01-edit-in-place: "true"
+    cert-manager.io/cluster-issuer: letsencrypt-opsmx-argo-argocd
+    cert-manager.io/issue-temporary-certificate: "true"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"networking.k8s.io/v1","kind":"Ingress","metadata":{"annotations":{"acme.cert-manager.io/http01-edit-in-place":"true","cert-manager.io/cluster-issuer":"letsencrypt-opsmx-argo-argocd","cert-manager.io/issue-temporary-certificate":"true","kubernetes.io/ingress.class":"nginx","kubernetes.io/tls-acme":"true"},"name":"gate-zen-ingress","namespace":"zendeskoss"},"spec":{"rules":[{"host":"gate-zen.ryzon7-isd40.opsmx.org","http":{"paths":[{"backend":{"service":{"name":"gate-deck","port":{"number":8084}}},"path":"/","pathType":"ImplementationSpecific"}]}}],"tls":[{"hosts":["gate-zen.ryzon7-isd40.opsmx.org"],"secretName":"gate-zen-ingress"}]}}
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  name: gate-cve-ingress
+spec:
+  rules:
+  - host: spin-gate.apple-cve.opsmx.net
+    http:
+      paths:
+      - backend:
+          service:
+            name: spin-gate
+            port:
+              number: 8084
+        path: /
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - spin-gate.apple-cve.opsmx.net
+    secretName: gate-zen-ingress
+status:
+  loadBalancer: {}

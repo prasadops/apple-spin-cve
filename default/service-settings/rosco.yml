@@ -1,0 +1,30 @@
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1d00f44-202305290905
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1d00f44-202305290524
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1d00f44-202305301414
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:116de53-202305310527
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1c00ddd-202306011349
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:f1cea33-202306050821
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:c93ddfc-202306061411
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:6a968ca-202306131650
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:fd332c0-202306151550 
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:53a5c73-202306211439
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:53a5c73-202306230633-dev
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:d637242-202306231106
+#artifactId: quay.io/opsmxpublic/ubi8-spin-rosco:6cfb434-8
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:53a5c73-202306230633
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:7bca94e-202306261227
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:7bca94e-202306271248
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.1202306271248
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.120230818
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.1914
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.1921-dev
+#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.1927		
+artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.11107
+
+kubernetes:
+  podAnnotations:
+    prometheus.io/path: /aop-prometheus
+    prometheus.io/port: '8087'
+    prometheus.io/scrape: 'true'
+  useExecHealthCheck: true
+  customHealthCheckExecCommands: ["wget", "--no-check-certificate", "--spider", "-q", "http://localhost:8087/health"]
