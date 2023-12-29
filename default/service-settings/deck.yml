@@ -1,22 +1,2 @@
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:29155a2-202305290905
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:29155a21e-202305251348
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:29155a21e-202305301427
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:29155a21e-202306011405
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:29155a21e-202306011405
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:29155a21e-202306021050
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:29155a21e-202306021050
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:6276e01f1-202306230711
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:6276e01f1-202306230711
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:6276e01f1-202306230711
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:8ee7582cb-202306261325
-#artifactId: quay.io/opsmxpublic/ubi8-oes-deck:82451241c-13
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:10f651a-202306271243
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.1202306271243
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.120230818
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.1914
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.1921
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.1927		
-artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.11107
-
 env:
   API_HOST: http://spin-gate:8084
