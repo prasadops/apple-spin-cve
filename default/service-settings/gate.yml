@@ -22,15 +22,6 @@
 #artifactId: quay.io/opsmxpublic/ubi8-gate-cve:1.30.11107
 artifactId: quay.io/opsmxpublic/ubi8-gate-cve:1.30.120231129
 
-healthEndpoint: /health
-kubernetes:
-  useExecHealthCheck: false
-  podAnnotations:
-    prometheus.io/path: /aop-prometheus
-    prometheus.io/port: '8084'
-    prometheus.io/scrape: 'true'
-  useExecHealthCheck: true
-  #customHealthCheckExecCommands: ["wget", "--no-check-certificate", "--spider", "-q", "http://localhost:8084/health"]
 env:
   JAVA_OPTS: "-XX:MaxRAMPercentage=100.0"
 
