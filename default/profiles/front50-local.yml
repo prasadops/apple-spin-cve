@@ -1,27 +1,3 @@
-sql:
-  enabled: true
-  connectionPools:
-    default:
-      jdbcUrl: jdbc:mysql://mysql-svc:3306/front50?enabledTLSProtocols=TLSv1.2
-      maxLifetimeMs: 59990
-      connectionTimeoutMs: 5000
-      validationTimeoutMs: 5000
-      minIdle: 25
-      maxPoolSize: 25
-      user: front50_service
-      password: OpsmxAdmin1@3 
-  migration:
-    jdbcUrl: jdbc:mysql://mysql-svc:3306/front50?enabledTLSProtocols=TLSv1.2
-    user: front50_migrate
-    password: OpsmxAdmin1@3 
-executionRepository:
-  sql:
-    enabled: true
-  redis:
-    enabled: false
-monitor:
-  activeExecutions:
-    redis: false
 spinnaker:
   s3:
     versioning: false
