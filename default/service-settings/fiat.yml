@@ -1,0 +1,28 @@
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:f4e1ea8-202305290905
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:f4e1ea8-202305251324
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:f4e1ea8-202305301340-dev 
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:0471564-202306011306
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:0471564-202306051311
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:a515e7d-202306061409
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:a515e7d-202306131543 
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:776ceaa-202306220701
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:314bf13-202306230633-dev
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:81b830b-202306231106
+#artifactId: quay.io/opsmxpublic/ubi8-oes-fiat:3df6f2e-20
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:314bf13-202306230633
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1d408fd-202306261227
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1d408fd-202306271248
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.1202306271248
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.120230818
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.1914
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.1921-dev
+#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.1927	
+artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.11107
+
+kubernetes:
+  podAnnotations:
+    prometheus.io/path: /aop-prometheus
+    prometheus.io/port: '7003'
+    prometheus.io/scrape: 'true'
+  useExecHealthCheck: true
+  customHealthCheckExecCommands: ["wget", "--no-check-certificate", "--spider", "-q", "http://localhost:7003/health"]

@@ -1,0 +1,40 @@
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:c6d57a1-202305290905
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:c6d57a1fe-202305290846
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:7667f79d3-202305301354
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:70bf43082-202305310706
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:53c73b240-202306011328
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:0f66c8f23-202306051222
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:fd43750d1-202306061429
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:20416e1d5-202306091250
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:482e5a249-202306131703
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:67bf1161d-202306141330
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:c2c2bec71-202306161456
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:52195c708-202306201141
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:0766f7396-202306221136
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:b52749c-202306230648-dev
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:e696054-202306231106
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:b52749c-202306230648
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:6ff6715-202306261442
+#artifactId: quay.io/opsmxpublic/ubi8-spin-clouddriver:1.30.1-cli
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:6ff6715-202306271248
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:b4eb51182-202306300750
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.120230818
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.1914
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.1921-dev
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.1927
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.10811
+#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.11107
+artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.11116
+
+env:
+  JAVA_OPTS: "-XX:MaxRAMPercentage=100.0 -Dspring.cloud.config.server.native.searchLocations=file:///opt/spinnaker/config"
+  SPRING_PROFILES_ACTIVE: local,composite,git
+  #SPRING_PROFILES_ACTIVE: local,composite,native
+  #SPRING_CONFIG_LOCATION: optional:file:/opt/spinnaker/config/
+kubernetes:
+   podAnnotations:
+    prometheus.io/path: /aop-prometheus
+    prometheus.io/port: '7002'
+    prometheus.io/scrape: 'true'
+   useExecHealthCheck: true
+   customHealthCheckExecCommands: ["wget", "--no-check-certificate", "--spider", "-q", "http://localhost:7002/health"]

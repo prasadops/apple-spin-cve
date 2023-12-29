@@ -1,0 +1,23 @@
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:b27fed88-202306150503
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:e3371fd-202306220809
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:3a5a156-202306230633-dev
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:220ae68-202306231106
+#artifactId: quay.io/opsmxpublic/ubi8-oes-front50:97709d00-24
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:3a5a156-202306230633
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:7107633-202306261237
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:7107633-202306271248
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:1.30.1202306271248
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:1.30.120230818
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:1.30.1914
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:1.30.1921-dev
+#artifactId: quay.io/opsmxpublic/ubi8-front50-cve:1.30.1927
+artifactId: quay.io/opsmxpublic/ubi8-front50-cve:1.30.11107
+
+kubernetes:
+  podAnnotations:
+    prometheus.io/path: /aop-prometheus
+    prometheus.io/port: '8080'
+    prometheus.io/scrape: 'true'
+  useExecHealthCheck: true
+  customHealthCheckExecCommands: ["wget", "--no-check-certificate", "--spider", "-q", "http://localhost:8080/health"]
+

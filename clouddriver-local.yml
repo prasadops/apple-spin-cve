@@ -1,0 +1,36 @@
+caching:
+  writeEnabled: true
+kubernetes:
+  enabled: true
+  accounts:
+  - name: "testsai"
+    liveManifestCalls: true
+    requiredGroupMembership: []
+    providerVersion: "v2"
+    permissions: {}
+    dockerRegistries: []
+    kubeconfigFile: "configserver:kubeCfg_deploy-apple"
+    configureImagePullSecrets: true
+    serviceAccount: false
+    cacheThreads: 1
+    namespaces:
+    - "apple"
+    - "deploy-cve"
+    omitNamespaces: []
+    kinds: []
+    omitKinds:
+    - "podPreset"
+    customResources: []
+    cachingPolicies: []
+    onlySpinnakerManaged: true
+    checkPermissionsOnStartup: false
+  - name: "sai2"
+    liveManifestCalls: true
+    requiredGroupMembership: []
+    providerVersion: "v2"
+    permissions: {}
+    dockerRegistries: []
+    kubeconfigFile: "configserver:kubeCfg_deploy-apple"
+    configureImagePullSecrets: true
+    serviceAccount: false
+    cacheThreads: 1

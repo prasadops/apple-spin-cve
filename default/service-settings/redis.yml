@@ -1,0 +1,2 @@
+overrideBaseUrl: redis://:password@spin-redis-master:6379
+skipLifeCycleManagement: true
