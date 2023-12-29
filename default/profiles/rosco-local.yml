@@ -1,7 +1,7 @@
 rosco: 
   configDir: /opt/rosco/config/packer
 redis: 
-  connection: redis://:password@load-redis-master:6379
+  connection: redis://:password@spin-redis-master:6379
 debianRepository: http://ops-restapp-bucket.s3-website-us-west-2.amazonaws.com trusty main
 yumRepository: http://ops-rpm-bucket.s3-website-us-east-1.amazonaws.com
 spinnaker:
