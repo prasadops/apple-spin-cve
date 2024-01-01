@@ -1,5 +1,5 @@
 ldap:
-  enabled: true
+  enabled: false
   url: ldap://prodldap.opsmx.com:389
   userDnPattern: uid={0},ou=users,dc=opsmx,dc=com
 
