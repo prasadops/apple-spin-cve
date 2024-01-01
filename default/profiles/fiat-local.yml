@@ -41,29 +41,4 @@ permissionsRepository:
     max-query-concurrency: 20
     read-batch-size: 2000
     async-pool-size: 20
-sql:
-  enabled: true
-  connectionPools:
-    default:
-      default: true
-      user: fiat_service
-      password: OpsMx2021
-      #password: gYOUD8cHvD
-      #jdbcUrl: jdbc:mysql://spincloud-fiat-stg.cluster-cdm3zzmhohpx.us-west-2.rds.amazonaws.com:3306/fiat?enabledTLSProtocols=TLSv1.2
-      jdbcUrl: jdbc:mysql://mysqldeploy:3306/fiat?enabledTLSProtocols=TLSv1.2
-      connectionTimeout: 5000
-      maxLifetimeMs: 30000
-      maxPoolSize: 200
-    tasks:
-      user: fiat_service
-      password: OpsMx2021
-      #password: gYOUD8cHvD
-      jdbcUrl: jdbc:mysql://mysqldeploy:3306/fiat?enabledTLSProtocols=TLSv1.2
-      #jdbcUrl: jdbc:mysql://spincloud-fiat-stg.cluster-cdm3zzmhohpx.us-west-2.rds.amazonaws.com/fiat?enabledTLSProtocols=TLSv1.2
-  migration:
-    user: fiat_migrate
-    password: OpsMx2021
-    #password: gYOUD8cHvD
-    jdbcUrl: jdbc:mysql://mysqldeploy:3306/fiat?enabledTLSProtocols=TLSv1.2
-    #jdbcUrl: jdbc:mysql://spincloud-fiat-stg.cluster-cdm3zzmhohpx.us-west-2.rds.amazonaws.com/fiat?enabledTLSProtocols=TLSv1.2
 
