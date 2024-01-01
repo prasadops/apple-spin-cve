@@ -236,7 +236,7 @@ deploymentConfigurations:
           roleProviderType: FILE
         ldap:
           roleProviderType: LDAP
-      enabled: false
+      enabled: true
   artifacts:
     bitbucket:
       enabled: false
