@@ -27,6 +27,12 @@ env:
   JAVA_OPTS: "-XX:MaxRAMPercentage=100.0"
 healthEndpoint: /health
 kubernetes:
+  podAnnotations:
+    prometheus.io/path: /aop-prometheus
+    prometheus.io/port: '8008'
+    prometheus.io/scrape: 'true'
+  useExecHealthCheck: true
+  customHealthCheckExecCommands: ["wget", "--no-check-certificate", "--spider", "-q", "http://localhost:8008/health"]
   useExecHealthCheck: false
   volumes:
   - id: samlcerts  # This contains 2 files cert.key and cert.pem
