@@ -24,4 +24,13 @@ artifactId: quay.io/opsmxpublic/ubi8-gate-cve:1.30.120231129
 
 env:
   JAVA_OPTS: "-XX:MaxRAMPercentage=100.0"
-
+healthEndpoint: /health
+kubernetes:
+  useExecHealthCheck: false
+  volumes:
+  - id: samlcerts  # This contains 2 files cert.key and cert.pem
+    mountPath: /opt/saml/certs  # This path needs to match the path in gate-local.yml for certs
+    type: secret
+    readOnly: true
+  podAnnotations:
+    moniker.spinnaker.io/application: spin
