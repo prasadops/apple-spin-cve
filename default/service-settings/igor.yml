@@ -18,7 +18,8 @@
 #artifactId: quay.io/opsmxpublic/ubi8-igor-cve:1.30.1914
 #artifactId: quay.io/opsmxpublic/ubi8-igor-cve:1.30.1921-dev
 #artifactId: quay.io/opsmxpublic/ubi8-igor-cve:1.30.1927		
-artifactId: quay.io/opsmxpublic/ubi8-igor-cve:1.30.11107
+#artifactId: quay.io/opsmxpublic/ubi8-igor-cve:1.30.11107
+artifactId: quay.io/opsmxpublic/ubi8-spin-igor:b42e23d-7
 
 kubernetes:
   podAnnotations:
