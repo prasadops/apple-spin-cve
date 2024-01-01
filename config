@@ -7,13 +7,26 @@ deploymentConfigurations:
       enabled: false
       accounts: []
     aws:
-      enabled: false
-      accounts: []
+      enabled: true
+      accounts:
+      - name: aws
+        requiredGroupMembership: []
+        permissions: {}
+        accountId: '732813442182'
+        regions:
+        - name: us-east-1
+        assumeRole: role/ROL-Spinnaker-Managed-Role
+        lifecycleHooks: []
+      primaryAccount: aws
       bakeryDefaults:
         baseImages: []
+        awsAccessKey: AKIA2VHYVXSDKFPYJYUT
+        awsSecretKey: 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
+      accessKeyId: AKIA2VHYVXSDKFPYJYUT
+      secretAccessKey: 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
       defaultKeyPairTemplate: '{{name}}-keypair'
       defaultRegions:
-      - name: us-west-2
+      - name: us-east-1
       defaults:
         iamRole: BaseIAMRole
     ecs:
