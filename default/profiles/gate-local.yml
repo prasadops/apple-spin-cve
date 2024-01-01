@@ -2,3 +2,20 @@ ldap:
   enabled: true
   url: ldap://prodldap.opsmx.com:389
   userDnPattern: uid={0},ou=users,dc=opsmx,dc=com
+
+spring:
+  security:
+    saml2:
+      enabled: true
+      relyingparty:
+        registration:
+          spinnaker:
+            assertingparty:
+              metadata-uri: https://dev-74845923.okta.com/app/exke80hm0sVF4heSV5d7/sso/saml/metadata
+            signing:
+              credentials:
+              - private-key-location: file:/opt/saml/certs/key.pem
+                certificate-location: file:/opt/saml/certs/cert.pem
+      user-attribute-mapping:
+        roles: memberOf
+
