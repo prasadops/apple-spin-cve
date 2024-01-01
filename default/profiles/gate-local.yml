@@ -2,37 +2,3 @@ ldap:
   enabled: true
   url: ldap://prodldap.opsmx.com:389
   userDnPattern: uid={0},ou=users,dc=opsmx,dc=com
-  
-spring:
-  security:
-    saml2:
-      enabled: false
-      relyingparty:
-        registration:
-          spinnaker:
-            assertingparty:
-              metadata-uri: https://dev-74845923.okta.com/app/exka2rv9pdrVE9V305d7/sso/saml/metadata
-            signing:
-              credentials:
-              - private-key-location: file:/opt/saml/certs/key.pem
-                certificate-location: file:/opt/saml/certs/cert.pem
-      user-attribute-mapping:
-        roles: memberOf
-spinnaker:
-  extensibility:
-    plugins-root-path: /opt/gate/plugins
-    plugins:
-      Armory.ObservabilityPlugin:
-        enabled: true
-        config:
-          metrics:
-            prometheus:
-              enabled: true
-management:
-  metrics.distribution:
-    percentiles[http.server.requests]: 0.95, 0.99
-    percentiles-histogram[http.server.requests]: true
-  endpoints.web:
-    exposure.include: health,info,aop-prometheus
-    management.endpoints.web.base-path: /
-    path-mapping.prometheus: aop-prometheus      
