@@ -32,8 +32,6 @@ spinnaker:
             prometheus:
               enabled: true
     repositories:
-      pulumi:
-        url: https://raw.githubusercontent.com/pulumi/spinnaker-plugins-repository/master/repositories.json
       armory-observability-plugin-releases:
         url: https://raw.githubusercontent.com/armory-plugins/armory-observability-plugin-releases/master/repositories.json 
 management:
