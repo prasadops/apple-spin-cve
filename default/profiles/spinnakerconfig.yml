@@ -1,9 +1,16 @@
 spring:
   profiles:
-    include: awss3
+    #include: awss3
+    include: git
   cloud:
     config:
       server:
-        awss3:
-          region: "us-west-2"
-          bucket: "applecve-bucket"
+        #awss3:
+        git:
+          uri: https://github.com/prasadops/apple-spin-cve.git
+          username: prasadops
+          password: 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
+          basedir: /tmp/config-repo
+          defaultLabel: main
+          #region: "us-west-2"
+          #bucket: "applecve-bucket"
