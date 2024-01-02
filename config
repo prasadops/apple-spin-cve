@@ -131,7 +131,43 @@ deploymentConfigurations:
       enabled: false
     location: SPINNAKER_NAMESPACE
     customSizing: {}
-    sidecars: {}
+    sidecars:
+      spin-clouddriver-caching:
+      - name: k8s-config-sync
+        dockerImage: quay.io/opsmxpublic/ubi8-spin-clouddriver:k-jq-yq-aws
+        command: ["sh", "-c"]
+        args: ["bash /tmp/script/k8config-sync.sh"]
+        configMapVolumeMounts:
+        - configMapName: k8config-sync
+          mountPath: /tmp/script
+        mountPath: /opsmx/config-repo
+      spin-clouddriver-ro:
+      - name: k8s-config-sync
+        dockerImage: quay.io/opsmxpublic/ubi8-spin-clouddriver:k-jq-yq-aws
+        command: ["sh", "-c"]
+        args: ["bash /tmp/script/k8config-sync.sh"]
+        configMapVolumeMounts:
+        - configMapName: k8config-sync
+          mountPath: /tmp/script
+        mountPath: /opsmx/config-repo
+      spin-clouddriver-ro-deck:
+      - name: k8s-config-sync
+        dockerImage: quay.io/opsmxpublic/ubi8-spin-clouddriver:k-jq-yq-aws
+        command: ["sh", "-c"]
+        args: ["bash /tmp/script/k8config-sync.sh"]
+        configMapVolumeMounts:
+        - configMapName: k8config-sync
+          mountPath: /tmp/script
+        mountPath: /opsmx/config-repo
+      spin-clouddriver-rw:
+      - name: k8s-config-sync
+        dockerImage: quay.io/opsmxpublic/ubi8-spin-clouddriver:k-jq-yq-aws
+        command: ["sh", "-c"]
+        args: ["bash /tmp/script/k8config-sync.sh"]
+        configMapVolumeMounts:
+        - configMapName: k8config-sync
+          mountPath: /tmp/script
+        mountPath: /opsmx/config-repo
     initContainers: {}
     hostAliases: {}
     affinity: {}
