@@ -16,8 +16,8 @@
 #artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.1914
 #artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.1921
 #artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.1927		
-#artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.11107
-artifactId: quay.io/opsmxpublic/ubi8-oes-deck:82451241c-13
+artifactId: quay.io/opsmxpublic/ubi8-deck-cve:1.30.11107
+#artifactId: quay.io/opsmxpublic/ubi8-oes-deck:82451241c-13
 
 env:
   API_HOST: http://spin-gate:8084
