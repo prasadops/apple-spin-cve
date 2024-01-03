@@ -25,8 +25,8 @@
 #artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.1927
 #artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.10811
 #artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.11107
-#artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.11116
-artifactId: quay.io/opsmxpublic/ubi8-spin-clouddriver:4a2e87da5
+artifactId: quay.io/opsmxpublic/ubi8-clouddriver-cve:1.30.11116
+#artifactId: quay.io/opsmxpublic/ubi8-spin-clouddriver:4a2e87da5
 
 env:
   #JAVA_OPTS: "-XX:MaxRAMPercentage=100.0 -Dspring.cloud.config.server.native.searchLocations=file:///opt/spinnaker/config"
