@@ -20,8 +20,8 @@
 #artifactId: quay.io/opsmxpublic/ubi8-gate-cve:1.30.1921-dev
 #artifactId: quay.io/opsmxpublic/ubi8-gate-cve:1.30.1927		
 #artifactId: quay.io/opsmxpublic/ubi8-gate-cve:1.30.11107
-#artifactId: quay.io/opsmxpublic/ubi8-gate-cve:1.30.120231129
-artifactId: quay.io/opsmxpublic/ubi8-oes-gate:da8021a5-18
+artifactId: quay.io/opsmxpublic/ubi8-gate-cve:1.30.120231129
+#artifactId: quay.io/opsmxpublic/ubi8-oes-gate:da8021a5-18
 
 env:
   JAVA_OPTS: "-XX:MaxRAMPercentage=100.0"
