@@ -19,8 +19,8 @@
 #artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.1914
 #artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.1921-dev
 #artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.1927		
-#artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.11107
-artifactId: quay.io/opsmxpublic/ubi8-spin-rosco:6cfb434-8
+artifactId: quay.io/opsmxpublic/ubi8-rosco-cve:1.30.11107
+#artifactId: quay.io/opsmxpublic/ubi8-spin-rosco:6cfb434-8
 kubernetes:
   podAnnotations:
     prometheus.io/path: /aop-prometheus
