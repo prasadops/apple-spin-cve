@@ -22,8 +22,8 @@
 #artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.1921-dev
 #artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.1927
 #artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.11107
-#artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.11128
-artifactId: quay.io/opsmxpublic/ubi8-oes-echo:8fd3e1d6-7
+artifactId: quay.io/opsmxpublic/ubi8-echo-cve:1.30.11128
+#artifactId: quay.io/opsmxpublic/ubi8-oes-echo:8fd3e1d6-7
 
 
 kubernetes:
