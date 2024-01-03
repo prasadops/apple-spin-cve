@@ -17,8 +17,8 @@
 #artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.1914
 #artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.1921-dev
 #artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.1927	
-#artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.11107
-artifactId: quay.io/opsmxpublic/ubi8-oes-fiat:e0a5202-32
+artifactId: quay.io/opsmxpublic/ubi8-fiat-cve:1.30.11107
+#artifactId: quay.io/opsmxpublic/ubi8-oes-fiat:e0a5202-32
 
 kubernetes:
   podAnnotations:
