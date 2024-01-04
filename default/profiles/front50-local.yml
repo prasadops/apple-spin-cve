@@ -22,7 +22,26 @@ executionRepository:
 monitor:
   activeExecutions:
     redis: false
+
 spinnaker:
   s3:
     versioning: false
     enabled: false
+  extensibility:
+    plugins-root-path: /opt/front50/plugins
+    plugins:
+      Armory.ObservabilityPlugin:
+        enabled: true
+        config:
+          metrics:
+            prometheus:
+              enabled: true
+
+management:
+  metrics.distribution:
+    percentiles[http.server.requests]: 0.95, 0.99
+    percentiles-histogram[http.server.requests]: true
+  endpoints.web:
+    exposure.include: health,info,aop-prometheus
+    management.endpoints.web.base-path: /
+    path-mapping.prometheus: aop-prometheus
