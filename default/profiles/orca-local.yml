@@ -30,3 +30,21 @@ pollers:
 tasks:
   daysOfExecutionHistory: 180      # How many days to keep old task executions around.
   useManagedServiceAccounts: false
+spinnaker:
+  extensibility:
+    plugins-root-path: /opt/orca/plugins
+    plugins:
+      Armory.ObservabilityPlugin:
+        enabled: true
+        config:
+          metrics:
+            prometheus:
+              enabled: true
+management:
+  metrics.distribution:
+    percentiles[http.server.requests]: 0.95, 0.99
+    percentiles-histogram[http.server.requests]: true
+  endpoints.web:
+    exposure.include: health,info,aop-prometheus
+    management.endpoints.web.base-path: /
+    path-mapping.prometheus: aop-prometheus
